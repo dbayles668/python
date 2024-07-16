@@ -5,7 +5,7 @@
 
 
 # Basic data types in Python: Numbers, Strings, Booleans, Sequences, Dictionaries
-myint = 5
+myint = 2
 myfloat = 13.2
 mystr = "This is a string"
 mybool = True
@@ -19,7 +19,7 @@ print(mystr)
 print(mybool)
 print(mylist)
 print(mytuple)
-print(mydict)
+print(mydict[mylist[myint]])
 
 # re-declaring a variable works
 
