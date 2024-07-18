@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<person>
+<people>
+<person id="1">
   <firstname>Joe</firstname>
   <lastname>Marini</lastname>
   <home>Seattle</home>
@@ -8,3 +9,12 @@
   <skill name="C#"/>
   <skill name="HTML"/>
 </person>
+<person id="2">
+  <firstname>Dave</firstname>
+  <lastname>Bayles</lastname>
+  <home>Toronto</home>
+  <skill name="JavaScript"/>
+  <skill name="CGI"/>
+  <skill name="HTML"/>
+</person>
+</people>
