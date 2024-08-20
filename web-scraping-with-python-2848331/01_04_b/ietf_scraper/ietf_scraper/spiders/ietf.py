@@ -9,5 +9,5 @@ class IetfSpider(scrapy.Spider):
 
     def parse(self, response):
         #title = response.css('span.title::text').get()
-        title = response.xpath('//span[@class="title"]/text()').get()
+        title = response.xpath('//meta[@name="DC.Description.Abstract"]/@content').get()
         return {"title": title}
