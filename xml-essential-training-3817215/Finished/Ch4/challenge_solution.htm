@@ -55,52 +55,81 @@
             }
 
             function createBizCards(xmlData) {
+                var dropdownchoice = document.getElementById('createCarddrop');
+                var dropdownchoicemade = dropdownchoice.options[dropdownchoice.selectedIndex].innerHTML;
                 // get references to the data island and the array of business cards
                 var bizCards = xmlData.getElementsByTagName("BusinessCard");
 
                 // for each business card, loop over its tags and create a new <div> to
                 // each card along with the information for all the fields
                 for (var i = 0; i < bizCards.length; i++) {
+                    
+                    
                     var currentCard = bizCards[i]; // store a reference to the current <BusinessCard>
+                   
+                    var nameStr = currentCard.getElementsByTagName("Name")[0].firstChild.data;
+                    
+                    if(dropdownchoicemade == nameStr){
 
-                    // make a new <div> for the whole card
-                    var newCard = document.createElement("div");
-                    newCard.setAttribute("class", "BusinessCard");
+                        // make a new <div> for the whole card
+                        var newCard = document.createElement("div");
+                        newCard.setAttribute("class", "BusinessCard");
 
-                    // now create a <div> for the name
-                    var newName = createNameSection(currentCard);
-                    newCard.appendChild(newName);
+                        // now create a <div> for the name
+                        var newName = createNameSection(currentCard);
+                        newCard.appendChild(newName);
 
-                    // create a <div> for the phones
-                    var newPhone = createPhones(currentCard);
-                    newCard.appendChild(newPhone);
+                        // create a <div> for the phones
+                        var newPhone = createPhones(currentCard);
+                        newCard.appendChild(newPhone);
 
-                    // create a <div> for the email
-                    var newEmail = createEmailSection(currentCard);
-                    newCard.appendChild(newEmail);
+                        // create a <div> for the email
+                        var newEmail = createEmailSection(currentCard);
+                        newCard.appendChild(newEmail);
 
-                    // now add the new <div> containing the card info to the web page
-                    document
-                        .getElementById("cardContainer")
-                        .appendChild(newCard);
+                        // now add the new <div> containing the card info to the web page
+                        document
+                            .getElementById("cardContainer")
+                            .appendChild(newCard);
+                    }       
                 }
             }
-
+            function createBizCardsDropdown(xmlData) {
+                var bizCards = xmlData.getElementsByTagName("BusinessCard");
+                var dropentryzero = document.createElement("option");
+                dropentryzero.setAttribute("value", "");
+                     var dropentryzerostr = document.createTextNode("Select Name");
+                dropentryzero.appendChild(dropentryzerostr);
+                document
+                        .getElementById("createCarddrop")
+                        .appendChild(dropentryzero);
+                for (var i = 0; i < bizCards.length; i++) {
+                    var dropentry = document.createElement("option");
+                    dropentry.setAttribute("value", bizCards[i].getElementsByTagName("Name")[0].firstChild.data);
+                    var dropentryStr = document.createTextNode(
+                        bizCards[i].getElementsByTagName("Name")[0].firstChild.data
+                    );
+                    dropentry.appendChild(dropentryStr);
+                    document
+                        .getElementById("createCarddrop")
+                        .appendChild(dropentry);
+                } 
+            }
             function createCardElements() {
-                loadXMLDoc("challenge.xml").then(xml => createBizCards(xml))
+                loadXMLDoc("challenge.xml").then(xml => createBizCardsDropdown(xml))
             }
 
             window.addEventListener("load", function () {
-                document
-                    .getElementById("createCard")
-                    .addEventListener("click", createCardElements);
-            });
+                createCardElements();
+           });
         </script>
         <link rel="stylesheet" href="businesscard.css" />
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <button id="createCard">Create Business Card Elements</button>
-        <div id="cardContainer"></div>
+        <select name="createCarddrop" id="createCarddrop" onchange="document.getElementById('cardContainer').replaceChildren();loadXMLDoc('challenge.xml').then(xml => createBizCards(xml))";> 
+            
+        </select>
+         <div id="cardContainer"></div>
     </body>
 </html>
