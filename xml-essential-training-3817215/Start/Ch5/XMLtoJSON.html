@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Convert XML to JSON</title>
+        <script type="text/javascript">
+            async function loadXMLDoc(docURL) {
+                let doc = await fetch(docURL);
+                let response = await doc.text();
+                let xml = new DOMParser().parseFromString(response, "text/xml");
+                return xml;
+            }
+
+            // create an object from XML. That object can then be turned into JSON
+            // by using the JSON.stringify() function
+            function convertXmlToJSON(xmlObj) {
+                // this is the base object that will hold the data from the XML
+                let obj = {};
+
+
+                return obj;
+            }
+
+            function convertXML() {
+                loadXMLDoc("businesscard.xml")
+                .then(doc => {
+                    let obj = convertXmlToJSON(doc);
+                    document.getElementById("JSONContainer").textContent = JSON.stringify(obj, null, 3);
+                });
+            }
+
+            window.addEventListener("load", function () {
+                document
+                    .getElementById("convertXML")
+                    .addEventListener("click", convertXML);
+            });
+        </script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <button id="convertXML">Convert XML to JSON</button>
+        <pre id="JSONContainer"></pre>
+    </body>
+</html>
