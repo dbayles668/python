@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 caps = {
-    'browserName': 'firefox'
+    'browserName': 'chrome'
 }
 
 driver = webdriver.Remote(

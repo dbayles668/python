@@ -1,4 +1,4 @@
 from selenium import webdriver
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 driver.quit()
