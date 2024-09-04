@@ -5,7 +5,7 @@ caps = {
 }
 
 driver = webdriver.Remote(
-    command_executor='http://localhost:4444',
+    command_executor='http://localhost:57205',
     desired_capabilities=caps
 )
 driver.quit()
