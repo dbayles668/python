@@ -28,11 +28,12 @@ try:
     actions = ActionBuilder(driver)
     finger = actions.add_pointer_input(POINTER_TOUCH, "finger")
     finger.create_pointer_move(duration=0, x=100, y=500)
-    finger.create_pointer_down(MouseButton.LEFT)
-    finger.create_pointer_move(duration=250, x=0, y=-500, origin="pointer")
-    finger.create_pointer_up(MouseButton.LEFT)
+    finger.create_pointer_down(button=MouseButton.LEFT)
+    finger.create_pointer_move(duration=2500, x=0, y=-500, origin="pointer")
+    finger.create_pointer_up(button=MouseButton.LEFT)
     actions.perform()
 
-    driver.find_element(MobileBy.ACCESSIBILITY_ID, 'Stratocumulus')
+    wait.until(EC.presence_of_element_located(
+        (MobileBy.ACCESSIBILITY_ID, 'Stratocumulus'))).click()
 finally:
     driver.quit()
