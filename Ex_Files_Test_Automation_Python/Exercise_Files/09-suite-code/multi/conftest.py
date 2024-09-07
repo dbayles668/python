@@ -1,12 +1,13 @@
 import pytest
 from os import path
 from appium import webdriver
-
+from appium.options.android import UiAutomator2Options
+from appium.options.ios import XCUITestOptions
 from views.home_view import HomeView
 
 CUR_DIR = path.dirname(path.abspath(__file__))
-IOS_APP = path.join(CUR_DIR, '..', 'mobile', 'TheApp.app.zip')
-ANDROID_APP = path.join(CUR_DIR, '..', 'mobile', 'TheApp.apk')
+IOS_APP = path.join(CUR_DIR, 'TheApp.app.zip')
+ANDROID_APP = path.join(CUR_DIR, 'TheApp.apk')
 APPIUM = 'http://localhost:4723'
 
 IOS_CAPS = {
@@ -40,8 +41,10 @@ def platform(request):
 
 @pytest.fixture
 def driver(platform):
-    caps = IOS_CAPS if platform == 'ios' else ANDROID_CAPS
-    driver = webdriver.Remote(APPIUM, caps)
+    CAPS = IOS_CAPS if platform == 'ios' else ANDROID_CAPS
+    options = XCUITestOptions() if platform == 'ios' else UiAutomator2Options()
+    options.load_capabilities(CAPS)
+    driver = webdriver.Remote(APPIUM, options=options)    
     driver._platform = platform
     yield driver
     driver.quit()

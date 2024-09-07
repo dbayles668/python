@@ -23,3 +23,4 @@ class EchoView(BaseView):
         from views.home_view import HomeView
         self.driver.back()
         return HomeView(self.driver)
+ 

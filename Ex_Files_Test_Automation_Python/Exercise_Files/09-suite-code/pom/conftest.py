@@ -1,25 +1,24 @@
 import pytest
-from os import path
 from appium import webdriver
-
-from views.home_view import HomeView
+from os import path
+from appium.options.android import UiAutomator2Options
 
 CUR_DIR = path.dirname(path.abspath(__file__))
-APP = path.join(CUR_DIR, '..', 'mobile', 'TheApp.app.zip')
+APP = path.join(CUR_DIR, 'TheApp.apk')
 APPIUM = 'http://localhost:4723'
-
 
 @pytest.fixture
 def driver():
-    caps = {
-        'platformName': 'iOS',
-        'platformVersion': '13.6',
-        'deviceName': 'iPhone 11',
-        'automationName': 'XCUITest',
+    CAPS = {
+        'platformName': 'Android',
+        'platformVersion': '10.0',
+        'deviceName': 'Android Emulator',
+        'automationName': 'UiAutomator2',
         'app': APP,
     }
-
-    driver = webdriver.Remote(APPIUM, caps)
+    options = UiAutomator2Options()
+    options.load_capabilities(CAPS)
+    driver = webdriver.Remote(APPIUM, options=options)
     yield driver
     driver.quit()
 
