@@ -2,6 +2,7 @@ import pytest
 from appium import webdriver
 from os import path
 from appium.options.android import UiAutomator2Options
+from views.home_view import HomeView
 
 CUR_DIR = path.dirname(path.abspath(__file__))
 APP = path.join(CUR_DIR, 'TheApp.apk')

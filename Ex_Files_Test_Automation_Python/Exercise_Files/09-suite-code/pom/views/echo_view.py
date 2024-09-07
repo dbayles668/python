@@ -8,14 +8,15 @@ class EchoView(BaseView):
     MESSAGE_INPUT = (MobileBy.ACCESSIBILITY_ID, 'messageInput')
     SAVE_BUTTON = (MobileBy.ACCESSIBILITY_ID, 'messageSaveBtn')
     MESSAGE_LABEL = (MobileBy.ACCESSIBILITY_ID, 'savedMessage')
-
+    
     def save_message(self, message):
         self.wait_for(self.MESSAGE_INPUT).send_keys(message)
         self.find(self.SAVE_BUTTON).click()
 
-    def read_message(self):
+    def read_message(self, message):
+        LOOK_FOR = (MobileBy.ACCESSIBILITY_ID, message)
         try:
-            return self.wait_for(self.MESSAGE_LABEL).text
+            return self.wait_for(LOOK_FOR).text
         except TimeoutException:
             return None
 
@@ -23,4 +24,3 @@ class EchoView(BaseView):
         from views.home_view import HomeView
         self.driver.back()
         return HomeView(self.driver)
- 
