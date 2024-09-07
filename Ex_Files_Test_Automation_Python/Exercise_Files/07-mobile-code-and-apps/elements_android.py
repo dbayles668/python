@@ -27,7 +27,7 @@ try:
     wait.until(EC.presence_of_element_located(
         (MobileBy.ACCESSIBILITY_ID, 'messageInput'))).send_keys('Hello')
     driver.find_element(MobileBy.ACCESSIBILITY_ID, 'messageSaveBtn').click()
-    saved = driver.find_element(MobileBy.ACCESSIBILITY_ID, 'messageInput').text
+    saved = driver.find_element(MobileBy.XPATH, '//android.widget.TextView[@content-desc != ""]').text
     assert saved == 'Hello'
     driver.back()
 

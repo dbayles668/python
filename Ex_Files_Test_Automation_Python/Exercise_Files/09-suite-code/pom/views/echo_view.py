@@ -7,16 +7,15 @@ from views.base_view import BaseView
 class EchoView(BaseView):
     MESSAGE_INPUT = (MobileBy.ACCESSIBILITY_ID, 'messageInput')
     SAVE_BUTTON = (MobileBy.ACCESSIBILITY_ID, 'messageSaveBtn')
-    MESSAGE_LABEL = (MobileBy.ACCESSIBILITY_ID, 'savedMessage')
+    MESSAGE_LABEL = (MobileBy.XPATH, '//android.widget.TextView[@content-desc != ""]')
     
     def save_message(self, message):
         self.wait_for(self.MESSAGE_INPUT).send_keys(message)
         self.find(self.SAVE_BUTTON).click()
 
-    def read_message(self, message):
-        LOOK_FOR = (MobileBy.ACCESSIBILITY_ID, message)
+    def read_message(self):
         try:
-            return self.wait_for(LOOK_FOR).text
+            return self.wait_for(self.MESSAGE_LABEL).text
         except TimeoutException:
             return None
 
