@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from appium.options.android import UiAutomator2Options
 APPIUM = 'http://localhost:4723'
 CAPS = {
     'platformName': 'Android',

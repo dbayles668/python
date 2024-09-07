@@ -1,6 +1,7 @@
 import pytest
 from appium import webdriver
 from os import path
+from appium.options.android import UiAutomator2Options
 
 CUR_DIR = path.dirname(path.abspath(__file__))
 APP = path.join(CUR_DIR, 'TheApp.apk')
@@ -15,6 +16,8 @@ def driver():
         'automationName': 'UiAutomator2',
         'app': APP,
     }
-    driver = webdriver.Remote(APPIUM, CAPS)
+    options = UiAutomator2Options()
+    options.load_capabilities(CAPS)
+    driver = webdriver.Remote(APPIUM, options=options)
     yield driver
     driver.quit()

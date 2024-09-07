@@ -1,5 +1,6 @@
 from os import path
 from appium import webdriver
+from appium.options.android import UiAutomator2Options
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,8 +17,10 @@ CAPS = {
     'automationName': 'UiAutomator2',
     'app': APP,
 }
+options = UiAutomator2Options()
+options.load_capabilities(CAPS)
 
-driver = webdriver.Remote(APPIUM, CAPS)
+driver = webdriver.Remote(APPIUM,  options=options)
 try:
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located(

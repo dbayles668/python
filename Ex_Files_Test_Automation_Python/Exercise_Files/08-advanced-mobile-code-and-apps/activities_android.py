@@ -1,5 +1,6 @@
 from os import path
 from appium import webdriver
+from appium.options.android import UiAutomator2Options
 import time
 
 CUR_DIR = path.dirname(path.abspath(__file__))
@@ -13,7 +14,10 @@ CAPS = {
     'app': APP,
 }
 
-driver = webdriver.Remote(APPIUM, CAPS)
+options = UiAutomator2Options()
+options.load_capabilities(CAPS)
+
+driver = webdriver.Remote(APPIUM,  options=options)
 try:
     app = path.join(CUR_DIR, 'ApiDemos.apk')
     app_id = 'io.appium.android.apis'
