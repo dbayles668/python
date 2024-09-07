@@ -1,7 +1,8 @@
+message = 'Hello'
+
 def test_echo_box_displays_message_back(home):
     echo = home.nav_to_echo_box()
 
-    message = 'Hello'
     echo.save_message(message)
     assert echo.read_message() == message
     home = echo.nav_back()
