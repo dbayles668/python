@@ -15,7 +15,7 @@ CAPS = {
     'deviceName': 'Android Emulator',
     'automationName': 'UiAutomator2',
     'app': APP,
-}
+}    
 options = UiAutomator2Options()
 options.load_capabilities(CAPS)
 
