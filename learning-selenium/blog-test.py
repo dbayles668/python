@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 driver.get('https://selenium-blog.herokuapp.com/signup')
 
 login_form = driver.find_element(By.ID, "user_username")
