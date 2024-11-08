@@ -3,7 +3,7 @@ Documentation       This is some basic info about the whole suite
 Library             SeleniumLibrary
 
 #Run the script:
-#robot -d results tests/crm.robot
+#robot -d results C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-level-1-selenium-21986416\crm\Tests\crm.robot
 
 *** Variables ***
 
