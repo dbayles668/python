@@ -3,7 +3,7 @@ Documentation       This is some basic info about the whole suite
 Library             SeleniumLibrary
 
 #Run the script:
-#robot -d results C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-level-1-selenium-21986416\crm\Tests\crm.robot
+#robot -d C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-level-1-selenium-21986416\crm\Results C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-level-1-selenium-21986416\crm\Tests\crm.robot
 
 *** Variables ***
 
@@ -18,7 +18,7 @@ Should be able to add new customer
 
     #open the browser
     log                         Starting the test case!
-    open browser                https://automationplayground.com/crm/       chrome
+    open browser                http://automationplayground.com/crm/       chrome
 
     # resize browser window for recording
     Set window position         x=341   y=169

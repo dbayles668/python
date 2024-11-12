@@ -1,175 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2024-11-08T10:15:16.636914" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-12T18:42:51.740496" rpa="false" schemaversion="5">
 <suite id="s1" name="Front Office" source="C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-level-1-selenium-21986416\front-office-3\Tests\Front_Office.robot">
 <test id="s1-t1" name="Should be able to access &quot;Team&quot; page" line="15">
 <kw name="Begin Web Test" owner="CommonWeb" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:17.170915" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-11-12T18:42:52.965491" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-08T10:15:17.170915" elapsed="2.787003"/>
+<status status="PASS" start="2024-11-12T18:42:52.965213" elapsed="4.846055"/>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:17.169915" elapsed="2.788003"/>
+<status status="PASS" start="2024-11-12T18:42:52.964376" elapsed="4.847207"/>
 </kw>
 <kw name="Go to Landing Page" owner="FrontOfficeApp">
 <kw name="Navigate To" owner="Landing">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:19.964918" level="INFO">Opening url 'http://www.automationplayground.com/front-office'</msg>
+<msg time="2024-11-12T18:42:57.813851" level="INFO">Opening url 'http://www.automationplayground.com/front-office'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-08T10:15:19.963917" elapsed="0.817001"/>
+<status status="PASS" start="2024-11-12T18:42:57.813525" elapsed="0.589185"/>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:19.963917" elapsed="0.817998"/>
+<status status="PASS" start="2024-11-12T18:42:57.812987" elapsed="0.589869"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Landing">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-11-12T18:43:03.551306" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-12T18:43:03.551501" level="FAIL">Element 'id=mainNav' did not appear in 5 seconds.</msg>
 <arg>${LANDING_NAVIGATION_ELEMENT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-08T10:15:20.783915" elapsed="0.020004"/>
+<status status="FAIL" start="2024-11-12T18:42:58.403376" elapsed="5.153544">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:20.782915" elapsed="0.021004"/>
+<status status="FAIL" start="2024-11-12T18:42:58.403069" elapsed="5.154048">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:19.962916" elapsed="0.841003"/>
+<status status="FAIL" start="2024-11-12T18:42:57.812333" elapsed="5.744912">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </kw>
 <kw name="Go to &quot;Team&quot; Page" owner="FrontOfficeApp">
-<kw name="Select &quot;Team&quot; Page" owner="TopNav">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:20.804917" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
-<arg>${TOP_NAV_TEAM_LINK}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-08T10:15:20.804917" elapsed="0.091001"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-08T10:15:23.896126" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-08T10:15:20.895918" elapsed="3.000208"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:20.804917" elapsed="3.091209"/>
-</kw>
-<kw name="Verify Page Loaded" owner="Team">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${TEAM_HEADER_LABEL}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-08T10:15:23.896126" elapsed="0.013999"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:23.896126" elapsed="0.013999"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:20.803919" elapsed="3.106206"/>
+<status status="NOT RUN" start="2024-11-12T18:43:03.557688" elapsed="0.000046"/>
 </kw>
 <kw name="End Web Test" owner="CommonWeb" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-08T10:15:23.911125" elapsed="6.437558"/>
+<status status="PASS" start="2024-11-12T18:43:03.558472" elapsed="6.429702"/>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:23.911125" elapsed="6.437558"/>
+<status status="PASS" start="2024-11-12T18:43:03.558171" elapsed="6.430146"/>
 </kw>
 <doc>This is test 1</doc>
 <tag>test1</tag>
-<status status="PASS" start="2024-11-08T10:15:17.168916" elapsed="13.180756"/>
+<status status="FAIL" start="2024-11-12T18:42:52.963421" elapsed="17.025188">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </test>
 <test id="s1-t2" name="&quot;Team&quot; page should match requirements" line="21">
 <kw name="Begin Web Test" owner="CommonWeb" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:30.351666" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-11-12T18:43:09.991245" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-08T10:15:30.351666" elapsed="1.849129"/>
+<status status="PASS" start="2024-11-12T18:43:09.991041" elapsed="4.914277"/>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:30.350671" elapsed="1.851124"/>
+<status status="PASS" start="2024-11-12T18:43:09.990739" elapsed="4.914737"/>
 </kw>
 <kw name="Go to Landing Page" owner="FrontOfficeApp">
 <kw name="Navigate To" owner="Landing">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:32.202796" level="INFO">Opening url 'http://www.automationplayground.com/front-office'</msg>
+<msg time="2024-11-12T18:43:14.907557" level="INFO">Opening url 'http://www.automationplayground.com/front-office'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-08T10:15:32.202796" elapsed="0.647908"/>
+<status status="PASS" start="2024-11-12T18:43:14.907218" elapsed="0.414864"/>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:32.202796" elapsed="0.647908"/>
+<status status="PASS" start="2024-11-12T18:43:14.906705" elapsed="0.415548"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Landing">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-11-12T18:43:20.484522" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-12T18:43:20.484697" level="FAIL">Element 'id=mainNav' did not appear in 5 seconds.</msg>
 <arg>${LANDING_NAVIGATION_ELEMENT}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-08T10:15:32.850704" elapsed="0.016004"/>
+<status status="FAIL" start="2024-11-12T18:43:15.322798" elapsed="5.163735">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:32.850704" elapsed="0.016004"/>
+<status status="FAIL" start="2024-11-12T18:43:15.322486" elapsed="5.164205">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:32.201795" elapsed="0.664913"/>
+<status status="FAIL" start="2024-11-12T18:43:14.906096" elapsed="5.580705">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </kw>
 <kw name="Go to &quot;Team&quot; Page" owner="FrontOfficeApp">
-<kw name="Select &quot;Team&quot; Page" owner="TopNav">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:32.868703" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
-<arg>${TOP_NAV_TEAM_LINK}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-08T10:15:32.867706" elapsed="0.064998"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-08T10:15:35.934454" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-08T10:15:32.933706" elapsed="3.000748"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:32.867706" elapsed="3.066748"/>
-</kw>
-<kw name="Verify Page Loaded" owner="Team">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${TEAM_HEADER_LABEL}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-08T10:15:35.935453" elapsed="0.013001"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:35.934454" elapsed="0.014998"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:32.867706" elapsed="3.081746"/>
+<status status="NOT RUN" start="2024-11-12T18:43:20.487172" elapsed="0.000044"/>
 </kw>
 <kw name="Validate &quot;Team&quot; Page" owner="FrontOfficeApp">
-<kw name="Validate Page Contents" owner="Team">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-08T10:15:35.976452" level="INFO">${ElementText} = OUR AMAZING TEAM</msg>
-<var>${ElementText}</var>
-<arg>${TEAM_HEADER_LABEL}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-08T10:15:35.950454" elapsed="0.025998"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${ElementText}</arg>
-<arg>Our Amazing Team</arg>
-<arg>ignore_case=true</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-11-08T10:15:35.977454" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:35.949452" elapsed="0.028002"/>
-</kw>
-<status status="PASS" start="2024-11-08T10:15:35.949452" elapsed="0.028002"/>
+<status status="NOT RUN" start="2024-11-12T18:43:20.487470" elapsed="0.000059"/>
 </kw>
 <kw name="End Web Test" owner="CommonWeb" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-08T10:15:35.978453" elapsed="6.421323"/>
+<status status="PASS" start="2024-11-12T18:43:20.488172" elapsed="6.427470"/>
 </kw>
-<status status="PASS" start="2024-11-08T10:15:35.978453" elapsed="6.421323"/>
+<status status="PASS" start="2024-11-12T18:43:20.487879" elapsed="6.427902"/>
 </kw>
 <doc>This is test 2</doc>
 <tag>test2</tag>
-<status status="PASS" start="2024-11-08T10:15:30.350671" elapsed="12.049105"/>
+<status status="FAIL" start="2024-11-12T18:43:09.990198" elapsed="16.925870">Element 'id=mainNav' did not appear in 5 seconds.</status>
 </test>
 <doc>Talk about what this suite of tests does</doc>
-<status status="PASS" start="2024-11-08T10:15:16.641916" elapsed="25.759878"/>
+<status status="FAIL" start="2024-11-12T18:42:51.743919" elapsed="35.173860"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">test1</stat>
-<stat pass="1" fail="0" skip="0">test2</stat>
+<stat pass="0" fail="1" skip="0">test1</stat>
+<stat pass="0" fail="1" skip="0">test2</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Front Office">Front Office</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Front Office">Front Office</stat>
 </suite>
 </statistics>
 <errors>
