@@ -7,5 +7,5 @@ Verify Search Completed
 
 Click Product Link
     [Documentation]  Clicks on the first product in the search results list
-    Click Element  xpath://*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[7]
+    Click Element  xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[7]
     

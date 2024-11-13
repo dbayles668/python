@@ -1,186 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-12T22:35:43.239470" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-12T23:04:22.029579" rpa="false" schemaversion="5">
 <suite id="s1" name="Web Tests" source="C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-level-1-selenium-21986416\explore-libraries\Tests\Web_Tests.robot">
 <test id="s1-t1" name="Logged out user can search for products" line="17">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:35:44.403668" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-11-12T23:04:23.290110" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-12T22:35:44.403418" elapsed="4.913503"/>
+<status status="PASS" start="2024-11-12T23:04:23.289827" elapsed="4.756939"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:44.402440" elapsed="4.914658"/>
+<status status="PASS" start="2024-11-12T23:04:23.288886" elapsed="4.758152"/>
 </kw>
 <kw name="Search for Products" owner="AmazonApp">
 <kw name="Load" owner="LandingPage">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:35:49.318834" level="INFO">Opening url 'https://www.amazon.ca'</msg>
+<msg time="2024-11-12T23:04:28.049023" level="INFO">Opening url 'https://www.amazon.ca'</msg>
 <arg>${START_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-12T22:35:49.318548" elapsed="1.432361"/>
+<status status="PASS" start="2024-11-12T23:04:28.048832" elapsed="1.564458"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:49.318129" elapsed="1.433052"/>
+<status status="PASS" start="2024-11-12T23:04:28.048390" elapsed="1.565043"/>
 </kw>
 <kw name="Verify Page Loaded" owner="LandingPage">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Sell</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-12T22:35:50.752417" elapsed="0.078864"/>
+<status status="PASS" start="2024-11-12T23:04:29.613957" elapsed="0.079873"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:50.751568" elapsed="0.079973"/>
+<status status="PASS" start="2024-11-12T23:04:29.613644" elapsed="0.080332"/>
 </kw>
 <kw name="Search for Products" owner="TopNav">
 <kw name="Enter Search Term" owner="TopNav">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:35:50.833091" level="INFO">Typing text 'Ferrari' into text field 'id=twotabsearchtextbox'.</msg>
+<msg time="2024-11-12T23:04:29.695183" level="INFO">Typing text 'Ferrari' into text field 'id=twotabsearchtextbox'.</msg>
 <arg>id=twotabsearchtextbox</arg>
 <arg>${SEARCH_TERM}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-12T22:35:50.832720" elapsed="0.375806"/>
+<status status="PASS" start="2024-11-12T23:04:29.694775" elapsed="0.486045"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:50.832457" elapsed="0.376211"/>
+<status status="PASS" start="2024-11-12T23:04:29.694527" elapsed="0.486494"/>
 </kw>
 <kw name="Submit Search" owner="TopNav">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:35:51.209353" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<msg time="2024-11-12T23:04:30.181884" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
 <arg>id=nav-search-submit-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-12T22:35:51.209158" elapsed="2.673915"/>
+<status status="PASS" start="2024-11-12T23:04:30.181678" elapsed="2.790716"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:51.208866" elapsed="2.674341"/>
+<status status="PASS" start="2024-11-12T23:04:30.181278" elapsed="2.791260"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:50.831998" elapsed="3.051288"/>
+<status status="PASS" start="2024-11-12T23:04:29.694207" elapsed="3.278412"/>
 </kw>
 <kw name="Verify Search Completed" owner="SearchResults">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>results for "${SEARCH_TERM}"</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-12T22:35:53.883791" elapsed="0.027014"/>
+<status status="PASS" start="2024-11-12T23:04:32.973183" elapsed="0.407704"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:53.883494" elapsed="0.027444"/>
+<status status="PASS" start="2024-11-12T23:04:32.972832" elapsed="0.408189"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:49.317715" elapsed="4.593301"/>
+<status status="PASS" start="2024-11-12T23:04:28.047730" elapsed="5.333370"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-12T22:35:53.911797" elapsed="2.473065"/>
+<status status="PASS" start="2024-11-12T23:04:33.381936" elapsed="2.458171"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:53.911493" elapsed="2.473512"/>
+<status status="PASS" start="2024-11-12T23:04:33.381585" elapsed="2.458686"/>
 </kw>
 <tag>Web</tag>
-<status status="PASS" start="2024-11-12T22:35:44.401530" elapsed="11.983769"/>
+<status status="PASS" start="2024-11-12T23:04:23.287985" elapsed="12.552564"/>
 </test>
 <test id="s1-t2" name="Logged out user can add product to cart" line="21">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:35:56.387774" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-11-12T23:04:35.842645" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-12T22:35:56.387565" elapsed="4.644313"/>
+<status status="PASS" start="2024-11-12T23:04:35.842405" elapsed="4.883180"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:35:56.387265" elapsed="4.644835"/>
+<status status="PASS" start="2024-11-12T23:04:35.842091" elapsed="4.883653"/>
 </kw>
 <kw name="Search for Products" owner="AmazonApp">
 <kw name="Load" owner="LandingPage">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:36:01.033635" level="INFO">Opening url 'https://www.amazon.ca'</msg>
+<msg time="2024-11-12T23:04:40.727846" level="INFO">Opening url 'https://www.amazon.ca'</msg>
 <arg>${START_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-12T22:36:01.033434" elapsed="1.682957"/>
+<status status="PASS" start="2024-11-12T23:04:40.727563" elapsed="1.182363"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:01.033045" elapsed="1.683490"/>
+<status status="PASS" start="2024-11-12T23:04:40.726992" elapsed="1.183089"/>
 </kw>
 <kw name="Verify Page Loaded" owner="LandingPage">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Sell</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-12T22:36:02.718483" elapsed="0.094583"/>
+<status status="PASS" start="2024-11-12T23:04:41.910628" elapsed="0.362027"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:02.717484" elapsed="0.095714"/>
+<status status="PASS" start="2024-11-12T23:04:41.910314" elapsed="0.362594"/>
 </kw>
 <kw name="Search for Products" owner="TopNav">
 <kw name="Enter Search Term" owner="TopNav">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:36:02.814484" level="INFO">Typing text 'Ferrari' into text field 'id=twotabsearchtextbox'.</msg>
+<msg time="2024-11-12T23:04:42.274159" level="INFO">Typing text 'Ferrari' into text field 'id=twotabsearchtextbox'.</msg>
 <arg>id=twotabsearchtextbox</arg>
 <arg>${SEARCH_TERM}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-12T22:36:02.814175" elapsed="0.480597"/>
+<status status="PASS" start="2024-11-12T23:04:42.273932" elapsed="0.392562"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:02.813895" elapsed="0.481088"/>
+<status status="PASS" start="2024-11-12T23:04:42.273676" elapsed="0.393034"/>
 </kw>
 <kw name="Submit Search" owner="TopNav">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:36:03.295838" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<msg time="2024-11-12T23:04:42.667975" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
 <arg>id=nav-search-submit-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-12T22:36:03.295532" elapsed="3.495693"/>
+<status status="PASS" start="2024-11-12T23:04:42.667641" elapsed="2.839429"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:03.295201" elapsed="3.496159"/>
+<status status="PASS" start="2024-11-12T23:04:42.667108" elapsed="2.840177"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:02.813478" elapsed="3.977961"/>
+<status status="PASS" start="2024-11-12T23:04:42.273261" elapsed="3.234165"/>
 </kw>
 <kw name="Verify Search Completed" owner="SearchResults">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>results for "${SEARCH_TERM}"</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-12T22:36:06.791939" elapsed="0.032998"/>
+<status status="PASS" start="2024-11-12T23:04:45.508257" elapsed="0.031941"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:06.791644" elapsed="0.033421"/>
+<status status="PASS" start="2024-11-12T23:04:45.507773" elapsed="0.032561"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:01.032709" elapsed="5.792432"/>
+<status status="PASS" start="2024-11-12T23:04:40.726386" elapsed="4.814028"/>
 </kw>
 <kw name="Select Product from Search Results" owner="AmazonApp">
 <kw name="Click Product Link" owner="SearchResults">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:36:06.826304" level="INFO">Clicking element 'xpath://*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[1]'.</msg>
-<arg>xpath://*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[1]</arg>
+<msg time="2024-11-12T23:04:45.541555" level="INFO">Clicking element 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[7]'.</msg>
+<arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[7]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-12T22:36:06.826119" elapsed="0.229809"/>
+<status status="PASS" start="2024-11-12T23:04:45.541371" elapsed="3.029924"/>
 </kw>
 <doc>Clicks on the first product in the search results list</doc>
-<status status="PASS" start="2024-11-12T22:36:06.825847" elapsed="0.230283"/>
+<status status="PASS" start="2024-11-12T23:04:45.541122" elapsed="3.030392"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Product">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2024-11-12T22:36:12.780392" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-12T22:36:12.780684" level="FAIL">Text 'Back to results' did not appear in 5 seconds.</msg>
 <arg>Back to results</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2024-11-12T22:36:07.057008" elapsed="5.731223">Text 'Back to results' did not appear in 5 seconds.</status>
+<status status="PASS" start="2024-11-12T23:04:48.572337" elapsed="0.603447"/>
 </kw>
-<status status="FAIL" start="2024-11-12T22:36:07.056472" elapsed="5.732361">Text 'Back to results' did not appear in 5 seconds.</status>
+<status status="PASS" start="2024-11-12T23:04:48.571860" elapsed="0.604053"/>
 </kw>
-<status status="FAIL" start="2024-11-12T22:36:06.825518" elapsed="5.963543">Text 'Back to results' did not appear in 5 seconds.</status>
+<status status="PASS" start="2024-11-12T23:04:45.540800" elapsed="3.635188"/>
 </kw>
 <kw name="Add Product to Cart" owner="AmazonApp">
-<status status="NOT RUN" start="2024-11-12T22:36:12.789674" elapsed="0.000095"/>
+<kw name="Add to Cart" owner="Product">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:04:49.177124" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<arg>id=add-to-cart-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-12T23:04:49.176943" elapsed="1.607190"/>
+</kw>
+<status status="PASS" start="2024-11-12T23:04:49.176693" elapsed="1.607641"/>
+</kw>
+<kw name="Verify Product Added" owner="Cart">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>subtotal</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-12T23:04:50.785174" elapsed="0.109795"/>
+</kw>
+<status status="PASS" start="2024-11-12T23:04:50.784693" elapsed="0.110410"/>
+</kw>
+<status status="PASS" start="2024-11-12T23:04:49.176360" elapsed="1.718823"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-12T22:36:12.791223" elapsed="2.861082"/>
+<status status="PASS" start="2024-11-12T23:04:50.896040" elapsed="2.608448"/>
 </kw>
-<status status="PASS" start="2024-11-12T22:36:12.790588" elapsed="2.861873"/>
+<status status="PASS" start="2024-11-12T23:04:50.895722" elapsed="2.608904"/>
 </kw>
 <tag>Web</tag>
-<status status="FAIL" start="2024-11-12T22:35:56.386691" elapsed="19.266052">Text 'Back to results' did not appear in 5 seconds.</status>
+<status status="PASS" start="2024-11-12T23:04:35.841552" elapsed="17.663333"/>
 </test>
 <doc>These are some web tests</doc>
-<status status="FAIL" start="2024-11-12T22:35:43.243053" elapsed="32.411290"/>
+<status status="PASS" start="2024-11-12T23:04:22.033052" elapsed="31.473100"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1" skip="0">Web</stat>
+<stat pass="2" fail="0" skip="0">Web</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Web Tests">Web Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Web Tests">Web Tests</stat>
 </suite>
 </statistics>
 <errors>
