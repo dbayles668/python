@@ -6,7 +6,7 @@ Test Setup  Common.Begin Web Test
 Test Teardown  Common.End Web Test
 
 # ADD your sauce username and key, then use this command to RUN
-# robot -d results/win7-ie11 -v REMOTE_URL:http://YOUR-SAUCE-USERNAME:YOUR-SAUCE-KEY@ondemand.saucelabs.com:80/wd/hub -v DESIRED_CAPABILITIES:"platform:Windows 10,browserName:chrome,version:70.0" tests/amazon.robot
+# robot -d C:\Users\David\OneDrive\Desktop\python\robot-framework-test-automation-sauce-labs\Tests\Results\win7-ie11 -v DESIRED_CAPABILITIES:"platform:Windows 10,browserName:chrome,version:70.0" tests/amazon.robot
 
 *** Variables ***
 ${BROWSER} =  ie
