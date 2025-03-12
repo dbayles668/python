@@ -23,7 +23,7 @@ const int_two = [HexSplit(clrb,1), HexSplit(clrb,2), HexSplit(clrb,3)];
 
 //average color uses above variables, converts each component back to hexidecimal, and returns value
 // in case of odd sum, round up to next integer
-console.log(int_one[0]+int_two[0]);
+
 const avgcolor = [Math.round((int_one[0]+int_two[0])/2), Math.round((int_one[1]+int_two[1])/2), Math.round((int_one[2]+int_two[2])/2)];
 return avgcolor[0].toString(16)+avgcolor[1].toString(16)+avgcolor[2].toString(16);
 }
