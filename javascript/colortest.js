@@ -27,4 +27,4 @@ return avgcolor[0].toString(16).concat(avgcolor[1].toString(16).concat(avgcolor[
 color_a = 'E6E6FA'; // lavender
 color_b = '66CDAA'; // mediumaquamarine
 
-print(AvgClr(color_a, color_b));
+console.log(AvgClr(color_a, color_b));
