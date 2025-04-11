@@ -1,6 +1,6 @@
 // function that takes two web color codes, expressed as six digit hexidecimal strings
 // and averages the R, G, B elements
-// and resturns a new six digit hexidecimal string
+// and returns a new six digit hexidecimal string
 
 //function that converts a string num of a given radix (eg, 16 for nexadecimal) to interger
 function NumConvert(num,radix){
