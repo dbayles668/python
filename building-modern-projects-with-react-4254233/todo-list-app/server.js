@@ -3,7 +3,9 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-let todos = [];
+let todos = [{
+  id: '123', text: 'add a server', isCompleted: true,
+}];
 
 app.use(express.json());
 
@@ -22,7 +24,7 @@ app.post('/api/todos', (req, res) => {
 });
 
 app.delete('/api/todos/:id', (req, res) => {
-  const todoId = parseInt(req.params.id);
+  const todoId = req.params.id;
   todos = todos.filter(todo => todo.id !== todoId);
   res.send();
 });

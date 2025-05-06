@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https:test.com',
+        target: 'https://ctjrnvkf-3000.use.devtunnels.ms',
         changeOrigin: true,
       }
     }
