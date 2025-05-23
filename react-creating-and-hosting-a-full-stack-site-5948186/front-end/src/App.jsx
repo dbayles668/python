@@ -1,15 +1,29 @@
-import { useState } from 'react'
-import './App.css'
-import HomePage from './pages/HomePage'
+import { useState } from 'react';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import './App.css';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ArticlePage from './pages/ArticlePage';
+import ArticlesList from './pages/ArticlesList';
+import Layout from './Layout';
+import FileNotFound from './pages/FileNotFound';
 
+const routes = [{path: '/', element: <Layout />, errorElement: <FileNotFound />,
+  children: [{path: '/', element: <HomePage />},
+  {path: '/about', element: <AboutPage />},
+  {path: '/articles/:name', element: <ArticlePage />},
+  {path: '/articles', element: <ArticlesList />},
+]
+}]
+;
+
+const router = createBrowserRouter(routes);
 function App() {
-  
-
   return (
     <>
- <HomePage />
+ <RouterProvider router={router} />
     </>
   )
-}
+};
 
-export default App
+export default App;
